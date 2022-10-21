@@ -1,11 +1,9 @@
 import React from "react";
+// pages
+import MainPage from "./pages/mainPage";
 
-function App() {
-  return (
-    <div>
-      <p>first</p>
-    </div>
-  );
-}
+let App = () => {
+  return <MainPage />;
+};
 
 export default App;
