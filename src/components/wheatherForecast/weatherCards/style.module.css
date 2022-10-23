@@ -8,5 +8,5 @@
   @apply mt-3;
 }
 .wrapper img {
-  @apply mb-2;
+  @apply mb-2 w-20 h-20;
 }

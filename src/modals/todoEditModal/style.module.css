@@ -1,6 +1,13 @@
 .wrapper {
-  @apply bg-blue-400 w-[400px] h-24 m-10;
+  @apply bg-blue-400  w-[400px] h-32 m-10 absolute top-10
+  sm:left-[120px] lg:left-[800px] mx-auto my-auto rounded-2xl;
 }
 .wrapper input {
-  @apply w-[300px];
+  @apply w-[300px] ml-10 pl-3 rounded-sm;
+}
+.wrapper img {
+  @apply pt-1 pl-2 pb-3;
+}
+.wrapper div {
+  @apply cursor-pointer mt-3 p-1 rounded-full text-center bg-yellow-400 w-1/3 mx-auto;
 }
