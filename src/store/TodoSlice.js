@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-// json datas
 import TodoListTasks from "../utils/jsonData/TodoListTasks";
 
 const TodoSlice = createSlice({
@@ -30,14 +29,14 @@ const TodoSlice = createSlice({
     setChangeId: (state, action) => {
       state.changeId = action.payload;
     },
-    setCheckedBtnControl: (state, action) => {
+    setCheckedTrue: (state, action) => {
       state.allTodos.map((value) => {
         if (value.id == action.payload[0]) {
           value.isCompleted = true;
         }
       });
     },
-    setCheckedBtnControlSecond: (state, action) => {
+    setCheckedFalse: (state, action) => {
       state.allTodos.map((value) => {
         if (value.id == action.payload) {
           value.isCompleted = false;
@@ -53,7 +52,7 @@ export const {
   setDeleteCart,
   setChangeText,
   setChangeId,
-  setCheckedBtnControl,
-  setCheckedBtnControlSecond,
+  setCheckedTrue,
+  setCheckedFalse,
 } = TodoSlice.actions;
 export default TodoSlice.reducer;

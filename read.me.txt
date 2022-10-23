@@ -1,0 +1,10 @@
+
+proje hakkında:
+
+redux kullanılarak bir todo-app ve json datalar'dan veriler ile haberler ve hava durumuyla 
+alakalı 2 farklı kısım mevcuttur.
+
+not: tarasım kısımında çok bir detay verilmediğinden biraz insiyatif kullandım.
+incelerken kolaylıklar dilerim.
+
+baranbeyazit.com

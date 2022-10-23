@@ -2,72 +2,41 @@ import React from "react";
 import style from "./style.module.css";
 import { useSelector } from "react-redux";
 import { getAllTodosData } from "../../../store/TodoSlice";
-//components
-import CardItem from "../cardItem";
+import AllCardTodos from "./AllCardTodos";
 
 const TodoCard = () => {
   const getAllValue = useSelector(getAllTodosData);
   const [screenSelect, setScreenSelect] = React.useState(false);
 
-  function makeFalse() {
+  function screenControlFalse() {
     setScreenSelect(false);
   }
 
-  function makeTrue() {
+  function screenControlTrue() {
     setScreenSelect(true);
   }
 
   return (
     <div className={style.wrapper}>
       <div className={style.switchBtn}>
-        <div
+        <button
           style={{ background: screenSelect !== false ? "white" : "yellow" }}
-          onClick={makeFalse}
+          onClick={screenControlFalse}
         >
-          <p>All Todos</p>
-        </div>
-        <div
+          All Todos
+        </button>
+
+        <button
           style={{ background: screenSelect == false ? "white" : "yellow" }}
-          onClick={makeTrue}
+          onClick={screenControlTrue}
         >
-          <p>Cheked Todos</p>
-        </div>
+          Cheked Todos
+        </button>
       </div>
-      <hr className={style.hr} />
+      <hr />
       <AllCardTodos data={getAllValue} setScreen={screenSelect} />
     </div>
   );
 };
 
 export default TodoCard;
-
-let AllCardTodos = ({ data, setScreen }) => {
-  console.log(setScreen);
-  return (
-    <>
-      {setScreen === false
-        ? data.map((val, index) =>
-            val.isCompleted === false ? (
-              <CardItem key={index} value={val} />
-            ) : null
-          )
-        : data.map((val, index) =>
-            val.isCompleted === true ? (
-              <CardItem key={index} value={val} />
-            ) : null
-          )}
-    </>
-  );
-};
-/*
-
-  
-      {data.map((val, index) =>
-        val.isCompleted === false ? <CardItem key={index} value={val} /> : null
-      )}
-      <div className="bg-yellow-400">ayırıcı baba</div>
-      {data.map((val, index) =>
-        val.isCompleted === true ? <CardItem key={index} value={val} /> : null
-      )}
-
-*/

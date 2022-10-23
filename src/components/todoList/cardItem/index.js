@@ -4,8 +4,8 @@ import { useDispatch } from "react-redux";
 import {
   setDeleteCart,
   setChangeId,
-  setCheckedBtnControl,
-  setCheckedBtnControlSecond,
+  setCheckedTrue,
+  setCheckedFalse,
 } from "../../../store/TodoSlice";
 import trashImage from "../../../assets/images/trash.svg";
 import editImage from "../../../assets/images/edit.svg";
@@ -14,10 +14,9 @@ const rootElement = document.getElementById("todo-edit-modal-root");
 const CardItem = ({ value }) => {
   const [checked, setChecked] = React.useState(value.isCompleted);
   let dispatch = useDispatch();
+
   React.useEffect(() => {
-    checked !== false
-      ? dispatch(setCheckedBtnControl([value.id]))
-      : console.log("");
+    checked !== false ? dispatch(setCheckedTrue([value.id])) : console.log("");
     rootElement.style.visibility = "hidden";
   }, [checked]);
 
@@ -33,7 +32,7 @@ const CardItem = ({ value }) => {
 
   let checkboxControl = () => {
     setChecked(!checked);
-    dispatch(setCheckedBtnControlSecond([value.id]));
+    dispatch(setCheckedFalse([value.id]));
   };
   return (
     <div className={style.wrapper}>
