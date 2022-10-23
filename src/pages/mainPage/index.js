@@ -1,12 +1,12 @@
 import React from "react";
 // components
+import CardItem from "../../components/todoList/cardItem";
+import TodoCard from "../../components/todoList/todoCard";
 
 const MainPage = () => {
   return (
     <>
-      <pre>this is main page</pre>
-      <pre>this is main page</pre>
-      <pre>this is main page</pre>
+      <TodoCard />
     </>
   );
 };

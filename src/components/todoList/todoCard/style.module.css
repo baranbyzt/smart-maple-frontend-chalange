@@ -1,0 +1,14 @@
+.wrapper {
+  @apply w-96 h-[620px] m-10 p-3 relative rounded-lg
+  border border-green-900 overflow-y-scroll;
+}
+.switchBtn {
+  @apply mx-auto text-[16px]
+  flex items-center;
+}
+.switchBtn div {
+  @apply cursor-pointer px-2 ml-4  border border-green-900 rounded-lg hover:bg-yellow-200;
+}
+.hr {
+  @apply mt-4 mb-2 mx-auto;
+}
