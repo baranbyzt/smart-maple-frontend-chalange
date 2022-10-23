@@ -1,0 +1,23 @@
+.wrapper {
+  @apply w-[340px] my-2 pl-2 pr-2 py-4 mx-auto flex justify-between items-center
+  rounded-xl bg-violet-200
+  text-[12px];
+}
+.wrapper p {
+  @apply overflow-hidden w-[200px];
+}
+.wrapper span {
+  @apply flex justify-between items-center;
+}
+.wrapper img {
+  @apply cursor-pointer;
+}
+.trashImage {
+  @apply w-[26px] h-[26px];
+}
+.editTestImage {
+  @apply w-[18px] h-[18px];
+}
+input {
+  @apply w-[19px] h-[19px] ml-6 cursor-pointer;
+}

@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply min-h-screen  w-full;
+  }
+}
+
+@layer utilities {
+  .wrapper {
+    @apply container bg-blue-50 mx-auto;
+  }
+}

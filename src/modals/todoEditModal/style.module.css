@@ -1,0 +1,6 @@
+.wrapper {
+  @apply bg-blue-400 w-[400px] h-24 m-10;
+}
+.wrapper input {
+  @apply w-[300px];
+}
