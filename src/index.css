@@ -11,6 +11,6 @@
 
 @layer utilities {
   .wrapper {
-    @apply container mx-auto;
+    @apply mx-auto;
   }
 }

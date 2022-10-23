@@ -1,3 +1,6 @@
 .wrapper {
   @apply block;
 }
+.innerWrapper {
+  @apply sm:block lg:flex justify-between items-center sm:flex-wrap 2xl:flex my-5;
+}
