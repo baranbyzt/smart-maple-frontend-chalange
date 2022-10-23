@@ -20,10 +20,16 @@ const TodoCard = () => {
   return (
     <div className={style.wrapper}>
       <div className={style.switchBtn}>
-        <div onClick={makeFalse}>
+        <div
+          style={{ background: screenSelect !== false ? "white" : "yellow" }}
+          onClick={makeFalse}
+        >
           <p>All Todos</p>
         </div>
-        <div onClick={makeTrue}>
+        <div
+          style={{ background: screenSelect == false ? "white" : "yellow" }}
+          onClick={makeTrue}
+        >
           <p>Cheked Todos</p>
         </div>
       </div>

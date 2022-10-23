@@ -1,13 +1,15 @@
 import React from "react";
+import style from "./style.module.css";
 // components
-import CardItem from "../../components/todoList/cardItem";
 import TodoCard from "../../components/todoList/todoCard";
+import WheatherForecast from "../../components/wheatherForecast";
 
 const MainPage = () => {
   return (
-    <>
+    <div className={style.wrapper}>
       <TodoCard />
-    </>
+      <WheatherForecast />
+    </div>
   );
 };
 
