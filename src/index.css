@@ -11,6 +11,6 @@
 
 @layer utilities {
   .wrapper {
-    @apply container bg-blue-50 mx-auto;
+    @apply container mx-auto;
   }
 }
